@@ -65,7 +65,7 @@ func offerHandler(data []byte) (ack bool) {
 		log.Errorf("error in unmarshalling the offers [%s]", err.Error())
 		return
 	}
-	log.Debugf("received message [%+v]", offers)
+	log.Debug("received message")
 	dbCtxt.StoreOfferInDB(offers)
 	ack = true
 	return

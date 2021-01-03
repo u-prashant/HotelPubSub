@@ -48,7 +48,7 @@ func main() {
 }
 
 func readAndPublishHotelInfo() {
-	byteValue, err := ioutil.ReadFile("sampledata.json")
+	byteValue, err := ioutil.ReadFile("../hotelpublisher/sampledata.json")
 	if err != nil {
 		log.Errorf("error in parsing json file - [%s]", err.Error())
 		return

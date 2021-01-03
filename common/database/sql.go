@@ -21,14 +21,11 @@ type DbConfig struct {
 // DbCtxt defines the connections
 type DbCtxt struct {
 	client *gorm.DB
-	// modelsConn map[string]*gorm.DB
 }
 
 // GetNewDbCtxt gets new db ctxt object
 func GetNewDbCtxt() *DbCtxt {
-	db := &DbCtxt{
-		// modelsConn: make(map[string]*gorm.DB),
-	}
+	db := &DbCtxt{}
 	return db
 }
 

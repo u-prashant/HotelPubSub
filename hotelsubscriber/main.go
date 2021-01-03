@@ -11,6 +11,8 @@ import (
 	log "github.com/sirupsen/logrus"
 )
 
+const configFile = "../hotelsubscriber/config.yaml"
+
 var (
 	mq     *messagequeue.RabbitMq
 	dbCtxt *database.DbCtxt
@@ -18,7 +20,7 @@ var (
 
 func init() {
 	log.SetLevel(log.DebugLevel)
-	err := loadConfig()
+	err := loadConfig(configFile)
 	if err != nil {
 		panic(err)
 	}

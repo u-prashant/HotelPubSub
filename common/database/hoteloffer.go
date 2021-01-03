@@ -7,11 +7,7 @@ import (
 )
 
 // StoreOfferInDB stores the hotel offer into db
-// Note :- this function expects all the models connection
-// to be initialised before and should always exists in the
-// map of connection.
 // TODO:
-// - add verification of connections
 // - add error handling of each Create operation
 // - perform all the operations as single transaction for rolling back ?
 func (db *DbCtxt) StoreOfferInDB(offers *HotelOffers) {

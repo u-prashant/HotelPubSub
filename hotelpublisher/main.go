@@ -11,11 +11,13 @@ import (
 	log "github.com/sirupsen/logrus"
 )
 
+const configFile = "../hotelpublisher/config.yaml"
+
 var mq *messagequeue.RabbitMq
 
 func init() {
 	log.SetLevel(log.DebugLevel)
-	err := loadConfig()
+	err := loadConfig(configFile)
 	if err != nil {
 		panic(err)
 	}
